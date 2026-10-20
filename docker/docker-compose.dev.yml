@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: docker/dockerfile.dev
+
+    image: linkedin-post-generator:dev
+
+    working_dir: /app
+
+    volumes:
+      - ..:/app
+
+    command: sleep infinity
